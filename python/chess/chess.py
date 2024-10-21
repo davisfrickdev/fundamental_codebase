@@ -1,16 +1,38 @@
 # Initialize the board with ranks and files properly organized
 empty_square = " " * 12
-rank_1 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_2 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_3 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_4 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_5 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_6 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_7 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
-rank_8 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+"""
+Instead of having all these you should create a function to call these. It has to be a function and not a variable 
+because setting a variable to a variable doesn't create a copy. You should start looking into design patterns 
+https://www.geeksforgeeks.org/software-design-patterns/#creational-design-patterns
+
+"""
+
+
+def create_rank():
+    return {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+
+rank_1 = create_rank()
+rank_2 = create_rank()
+rank_3 = create_rank()
+rank_4 = create_rank()
+rank_5 = create_rank()
+rank_6 = create_rank()
+rank_7 = create_rank()
+rank_8 = create_rank()
+ranks_list = [rank_1, rank_2, rank_3, rank_4, rank_5, rank_6, rank_7, rank_8]
+# rank_1 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_2 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_3 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_4 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_5 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_6 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_7 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+# rank_8 = {"h": empty_square, "g": empty_square, "f": empty_square, "e": empty_square, "d": empty_square, "c": empty_square, "b": empty_square, "a": empty_square}
+
 
 
 # Outer dictionary to represent ranks (1-8)
+# board = {index: rank for index, rank in enumerate(ranks_list)}
 board = {"1": rank_1, "2": rank_2, "3": rank_3, "4": rank_4, "5": rank_5, "6": rank_6, "7": rank_7, "8": rank_8}
 
 # Place pieces
